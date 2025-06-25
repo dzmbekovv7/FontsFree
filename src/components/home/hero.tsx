@@ -1,8 +1,6 @@
-import { useState } from 'react';
 import { Container } from '@/components/shared/container';
 import { Sparkles} from 'lucide-react';
 export function Hero() {
-	const [loaded, setLoaded] = useState(false);
 
 	return (
 		<section className="relative min-h-screen bg-gradient-to-br from-black via-gray-900 to-indigo-900 text-white overflow-hidden">
@@ -19,7 +17,6 @@ export function Hero() {
 					src="https://amadine.com/assets/img/og_img/rules-of-typography.png"
 					alt="Typography"
 					className="w-full h-full object-cover opacity-10"
-					onLoad={() => setLoaded(true)}
 				/>
 			</div>
 

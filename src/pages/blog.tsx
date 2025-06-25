@@ -19,7 +19,7 @@ function CardSkeleton() {
 export function BlogPage() {
   const [searchParams] = useSearchParams()
   const type = searchParams.get('type') || ''
-  const { data: articles = [], isLoading, isError } = useGetArticles()
+  const { data: articles = [], isLoading} = useGetArticles()
 
   const filteredArticles = type
     ? articles?.filter(article => article.type === type)

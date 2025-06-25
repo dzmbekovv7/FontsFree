@@ -33,7 +33,7 @@ export function CategoriesSection() {
 							/>
 						))
 					) : (
-						categories.map((category, index) => (
+						categories.map((category) => (
 							<a
 								key={category}
 								href={`/blog?type=${encodeURIComponent(category || '')}`}
