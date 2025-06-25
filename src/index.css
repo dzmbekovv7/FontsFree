@@ -1,0 +1,85 @@
+@import 'tailwindcss';
+
+:root {
+	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+	color-scheme: light;
+}
+
+* {
+	box-sizing: border-box;
+	list-style-type: none;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	min-height: 100vh;
+	color: #1a1a1a;
+	background: #fff;
+}
+
+button {
+	border-radius: 8px;
+	cursor: pointer;
+}
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+}
+.animate-pulse-slow {
+  animation: pulse-slow 6s infinite ease-in-out;
+}
+
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 1.2s ease-out forwards;
+}
+
+.animate-fade-in-left {
+  animation: fade-in 1.2s ease-out forwards;
+  transform: translateX(-30px);
+  opacity: 0;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.animate-fade-in-right {
+  animation: fade-in 1.2s ease-out forwards;
+  transform: translateX(30px);
+  opacity: 0;
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
+}
+@keyframes rotateCard {
+	from {
+		transform: perspective(1000px) rotateY(0deg);
+	}
+	to {
+		transform: perspective(1000px) rotateY(360deg);
+	}
+}
+
+.animate-3d-spin {
+	animation: rotateCard 20s linear infinite;
+	transform-style: preserve-3d;
+}
+
+.glass-neon {
+	backdrop-filter: blur(10px);
+	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	box-shadow: 0 0 20px rgba(255, 0, 255, 0.3), 0 0 60px rgba(0, 255, 255, 0.2);
+	border-radius: 1rem;
+}
